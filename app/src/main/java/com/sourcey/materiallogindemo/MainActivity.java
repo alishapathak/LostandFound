@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,5 +41,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void onClickMethod(View view) {
+
+        RelativeLayout r1 = findViewById(R.id.relativeLayout1);
+        r1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, report_lost.class);
+                startActivity(myIntent);
+            }
+        });
+
+        RelativeLayout r2 = findViewById(R.id.relativeLayout2);
+        r2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, report_found.class);
+                startActivity(myIntent);
+            }
+        });
     }
 }
