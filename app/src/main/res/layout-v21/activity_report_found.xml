@@ -22,7 +22,7 @@
             android:layout_marginTop="5dp"
             android:text="Report Found Item Here"
             android:textColor="#ce3232"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:typeface="serif"
             tools:ignore="DuplicateIds" />
 
@@ -92,9 +92,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="5dp"
-            android:text="Provide Your Contact Information"
+            android:text="Provide Your Conatact Information"
             android:textColor="#ce3232"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:typeface="serif"
             tools:ignore="DuplicateIds" />
 
@@ -131,12 +131,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/mybutton"
+            android:bottomLeftRadius="3dp"
+            android:bottomRightRadius="30dp"
             android:elevation="4dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
             android:text="Submit"
             android:textColor="#fff"
-            android:textSize="70dp" />
+            android:topLeftRadius="30dp"
+            android:topRightRadius="30dp" />
 
 
     </LinearLayout>
