@@ -5,13 +5,13 @@
     <string name="action_logout">Logout</string>
 
     <string-array name="category">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+        <item>Books</item>
+        <item>Wallets</item>
+        <item>Keys</item>
+        <item>Documents</item>
+        <item>Umbrella</item>
+        <item>Watches</item>
+        <item>Personal Accessories</item>
+        <item>Others</item>
     </string-array>
 </resources>

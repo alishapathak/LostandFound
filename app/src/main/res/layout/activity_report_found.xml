@@ -2,13 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#f2eaea"
     android:layout_weight="1">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#f2eaea"
+        android:layout_height="match_parent"
+        android:gravity="fill"
         android:isScrollContainer="true"
         android:orientation="vertical"
         android:padding="15dp">
@@ -20,7 +21,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="5dp"
-            android:text="Report Found Item Here"
+            android:text="Search Lost Item"
             android:textColor="#ce3232"
             android:textSize="30sp"
             android:typeface="serif"
@@ -34,21 +35,20 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:backgroundTint="@color/colorPrimaryDark"
-                android:hint="Category" />
+                android:hint="Category"
+                android:layout_alignParentLeft="true" />
 
             <Spinner
                 android:id="@+id/category1"
+                android:scrollbarStyle="insideOverlay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginEnd="81dp"
-                android:entries="@array/category"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="81dp" />
+                android:layout_centerHorizontal="true"
+                android:entries="@array/category" />
         </RelativeLayout>
 
         <EditText
@@ -56,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Item Name"
             android:inputType="textPersonName" />
 
@@ -69,80 +70,13 @@
             android:inputType="textPostalAddress" />
 
         <EditText
-            android:id="@+id/lost_date"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/colorPrimaryDark"
-            android:hint="Lost Date"
-            android:clickable="true"
-            android:focusable="false"/>
-
-        <EditText
-            android:id="@+id/description"
-            android:layout_width="fill_parent"
-            android:layout_height="100dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:breakStrategy="balanced"
-            android:fitsSystemWindows="true"
-            android:gravity="top"
-            android:hint="Description"
-            android:inputType="textMultiLine"
-            android:padding="5dp"
-            android:singleLine="false" />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:hint="Attachment"
-            android:inputType="" />
-
-        <TextView
-            android:id="@+id/contact_form_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="5dp"
-            android:text="Provide Your Contact Information"
-            android:textColor="#ce3232"
-            android:textSize="20sp"
-            android:typeface="serif"
-            tools:ignore="DuplicateIds" />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:hint="Name"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
-
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:hint="Phone"
-            android:inputType="phone" />
+            android:hint="Found Date"
+            android:inputType="datetime" />
 
         <Button
             android:layout_width="wrap_content"
@@ -152,9 +86,9 @@
             android:elevation="4dp"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            android:text="Submit"
+            android:text="Search"
             android:textColor="#fff"
-            android:textSize="22dp" />
+            android:textSize="25sp" />
 
 
     </LinearLayout>
