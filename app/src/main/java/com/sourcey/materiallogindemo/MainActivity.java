@@ -16,9 +16,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent i = getIntent();
+        int val = i.getIntExtra("val", 0);
+        System.out.println("-------------------------------------------------");
+        System.out.println("Val == " + val);
+        System.out.println("-------------------------------------------------");
+        if (val == 0) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
 
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -58,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
         r2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(MainActivity.this, report_found.class);
+                startActivity(myIntent);
+            }
+        });
+
+        RelativeLayout r3 = findViewById(R.id.relativeLayout3);
+        r3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, search_item.class);
                 startActivity(myIntent);
             }
         });

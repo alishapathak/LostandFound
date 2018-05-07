@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#f2eaea">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="fill"
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/contact_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Search Lost Item"
+            android:textColor="#ce3232"
+            android:textSize="30sp"
+            android:typeface="serif"
+            tools:ignore="DuplicateIds" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:hint="Category" />
+
+            <Spinner
+                android:id="@+id/category2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:entries="@array/category"
+                android:scrollbarStyle="insideOverlay" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/item_name2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="Item Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/item_location2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="Location"
+            android:inputType="textPostalAddress" />
+
+        <EditText
+            android:id="@+id/losts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="Lost Date"
+            android:inputType="date" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/mybutton"
+            android:elevation="4dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Search"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+</ScrollView>

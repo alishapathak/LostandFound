@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#f2eaea"
     android:layout_weight="1">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="fill"
+        android:layout_height="wrap_content"
+        android:background="#f2eaea"
         android:isScrollContainer="true"
         android:orientation="vertical"
         android:padding="15dp">
@@ -21,7 +21,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="5dp"
-            android:text="Search Lost Item"
+            android:text="Report Found Item Here"
             android:textColor="#ce3232"
             android:textSize="30sp"
             android:typeface="serif"
@@ -33,34 +33,37 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:hint="Category"
-                android:layout_alignParentLeft="true" />
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp" />
 
             <Spinner
-                android:id="@+id/category1"
-                android:scrollbarStyle="insideOverlay"
+                android:id="@+id/spinner1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:entries="@array/category" />
         </RelativeLayout>
 
         <EditText
+            android:id="@+id/item_name1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Item Name"
             android:inputType="textPersonName" />
 
         <EditText
+            android:id="@+id/item_location1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -69,16 +72,106 @@
             android:hint="Location"
             android:inputType="textPostalAddress" />
 
+
         <EditText
+            android:id="@+id/lost_date1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="Found Date"
-            android:inputType="datetime" />
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/item_description1"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:breakStrategy="balanced"
+            android:fitsSystemWindows="true"
+            android:gravity="top"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:singleLine="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/gallery_image1"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginVertical="40dp"
+                android:inputType=""
+                android:text="Item's Image"
+                android:textColor="@color/black"
+                tools:ignore="ButtonStyle" />
+
+            <ImageView
+                android:id="@+id/image_view1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="30dp"
+                android:contentDescription="Imagef"
+                android:src="@mipmap/ic_launcher_foreground" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/contact_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Provide Your Contact Information"
+            android:textColor="#ce3232"
+            android:textSize="20sp"
+            android:typeface="serif"
+            tools:ignore="DuplicateIds" />
+
+        <EditText
+            android:id="@+id/user_name1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/user_email1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+
+        <EditText
+            android:id="@+id/user_phone1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="Phone"
+            android:inputType="phone" />
 
         <Button
+            android:id="@+id/submit1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -86,9 +179,9 @@
             android:elevation="4dp"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            android:text="Search"
+            android:text="Submit"
             android:textColor="#fff"
-            android:textSize="25sp" />
+            android:textSize="22dp" />
 
 
     </LinearLayout>

@@ -15,6 +15,7 @@
         android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="onClickMethod"
@@ -23,7 +24,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639">
+        app:layout_constraintVertical_bias="0.239"
+        app:layout_constraintVertical_chainStyle="spread_inside">
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,12 +42,44 @@
             android:id="@+id/image1"
             android:layout_width="131dp"
             android:layout_height="114dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:clickable="false"
             android:contentDescription="@string/app_name"
             android:src="@drawable/lost" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onClickMethod"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/image2"
+            android:layout_toRightOf="@+id/image2"
+            android:clickable="false"
+            android:text="Search Lost Item"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="131dp"
+            android:layout_height="114dp"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/search" />
 
     </RelativeLayout>
 
@@ -66,15 +100,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/image3"
+            android:layout_toRightOf="@+id/image3"
             android:clickable="false"
             android:text="Report Found Item"
-            android:textSize="24sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/image3"
             android:layout_width="131dp"
             android:layout_height="114dp"
             android:clickable="false"

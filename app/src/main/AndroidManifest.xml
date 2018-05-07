@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sourcey.materiallogindemo">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher_round"
@@ -30,6 +34,8 @@
             android:name=".report_found"
             android:label="Report Found Items"
             android:parentActivityName=".report_found" />
+        <activity android:name=".search_item" />
+        <activity android:name=".found_data"></activity>
     </application>
 
 </manifest>
