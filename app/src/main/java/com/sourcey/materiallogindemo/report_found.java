@@ -123,7 +123,7 @@ public class report_found extends AppCompatActivity {
                         i.putExtra(Intent.EXTRA_SUBJECT, "Your Lost Items Found!!");
 
                         String body = "Hello " + l.getUser_name() + ",\n\n The item, " + l.getItem_name() + " you lost at " +
-                                l.getLost_date() + " is found near " + l.getLocation() + ".\n\n Please contact the following person :- \n\n" +
+                                l.getLost_date() + " is found near " + lostAndFound.getLocation() + ".\n\n Please contact the following person :- \n\n" +
                                 "Name : " + lostAndFound.getUser_name() +
                                 "\nPhone : " + lostAndFound.getUser_phone() +
                                 "\nEmail : " + lostAndFound.getUser_email() +
